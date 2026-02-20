@@ -85,11 +85,13 @@
         logoSize: 'h-16 sm:h-20', // حجم الشعار (ارتفاع)
       },
 
-      // ---------- أزرار التواصل (5 أزرار) ----------
+      // ---------- أزرار التواصل (الآن 4 أزرار، آخرها Instapay) ----------
       contacts: [
         { icon: 'fa-solid fa-phone', label: 'Call', url: 'tel:+201140567825' },
         { icon: 'fa-brands fa-whatsapp', label: 'WhatsApp', url: 'https://wa.me/+201140567825' },
         { icon: 'fa-regular fa-envelope', label: 'Email', url: 'mailto:markatef219@gmail.com' },
+        // زر Instapay الجديد – تحت زر البريد الإلكتروني مباشرة
+        { icon: 'fa-solid fa-coins', label: 'Instapay', url: 'https://ipn.eg/S/markatef777/instapay/5rBzLy' }, // غيّر الرابط إلى رابط العميل الفعلي
       ],
       
       // ---------- روابط التواصل الاجتماعي (3 أيقونات) ----------
@@ -104,7 +106,7 @@
 
       // ---------- الألوان الأساسية ----------
       colors: {
-        primary: '#797ff6',   // الذهبي
+        primary: '#797ff6',   // اللون الأساسي (بنفسجي فاتح)
         secondary: '#9ca3af',
         accent: '#a78bfa',
       },
@@ -247,7 +249,7 @@ END:VCARD`;
               </p>
             )}
 
-            {/* أزرار التواصل */}
+            {/* أزرار التواصل (الآن 4 أزرار، آخرها Instapay) */}
             <div className="grid grid-cols-1 gap-3">
               {CONFIG.contacts.map((btn, idx) => (
                 <a
@@ -265,7 +267,7 @@ END:VCARD`;
               ))}
             </div>
 
-             {/* أيقونات التواصل الاجتماعي (3) - لونها بنفسجي */}
+            {/* أيقونات التواصل الاجتماعي (3) - لونها بنفسجي */}
             <div className="flex justify-center items-center gap-6 pt-2">
               {CONFIG.socials.map((social, idx) => (
                 <a
